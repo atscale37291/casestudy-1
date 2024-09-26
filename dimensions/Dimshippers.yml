@@ -1,0 +1,36 @@
+unique_name: Dimshippers
+object_type: dimension
+label: Shippers
+hierarchies:
+  - unique_name: Dimshippers Hierarchy
+    label: Shippers
+    levels:
+      - unique_name: shippername
+      - unique_name: shippedcity
+      - unique_name: shippedcountry
+level_attributes:
+  - unique_name: shippedcountry
+    label: Shipped Country
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - shippedcountry
+    name_column: shippedcountry
+  - unique_name: shippedcity
+    label: Shipped City
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - shippedcity
+    name_column: shippedcity
+  - unique_name: shippername
+    label: Shipper Name
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - rowid
+    name_column: rowid
+type: standard
