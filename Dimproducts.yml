@@ -5,23 +5,23 @@ hierarchies:
   - unique_name: Dimproducts Hierarchy
     label: Products
     levels:
-      - unique_name: productname
+      - unique_name: productid
       - unique_name: productcategory
 level_attributes:
   - unique_name: productcategory
-    label: Product Category
+    label: Category
     contains_unique_names: false
     dataset: products
     is_unique_key: false
     key_columns:
       - productcategory
     name_column: productcategory
-  - unique_name: productname
-    label: Product Name
+  - unique_name: productid
+    label: Product
     contains_unique_names: false
     dataset: products
     is_unique_key: false
     key_columns:
-      - productname
+      - productid
     name_column: productid
 type: standard
